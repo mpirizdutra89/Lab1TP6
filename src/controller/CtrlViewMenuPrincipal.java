@@ -30,6 +30,8 @@ public class CtrlViewMenuPrincipal {
 
     public static void mostrarView() {
         listaProductos = new TreeSet<>();
+        cargarAutomatica();
+
         escritorio.setSize(890, 590);
         vmp.setContentPane(escritorio);
 
@@ -154,6 +156,14 @@ public class CtrlViewMenuPrincipal {
           for (int i = tablet.getColumnCount() - 1; i >= 0; i--) {
                 tablet.removeColumn(tablet.getColumnModel().getColumn(i));
             }
+     }
+     
+     private static void cargarAutomatica(){
+          listaProductos.add(new Productos(10,"milanesa",23.0,3,Categorias.COMESTIBLES));
+          listaProductos.add(new Productos(12,"lavandina",15.0,3,Categorias.LIMPIEZA));
+          listaProductos.add(new Productos(13,"pollo",83.0,3,Categorias.COMESTIBLES));
+          listaProductos.add(new Productos(14,"antonio bandera",500.0,3,Categorias.PERFUMERIA));
+       
      }
           
 

@@ -27,7 +27,7 @@ public class CtrlConsultaPrecio {
 
                         Double inicio = Double.valueOf(cp.getjTxtInicio().getText());
                         Double fin = Double.valueOf(cp.getjTxtFin().getText());
-                        if (inicio >= producto.getPrecio() || fin <= producto.getPrecio()) {
+                        if (producto.getPrecio()>=inicio   && producto.getPrecio()<= fin  ) {
 
                             addRows(producto);
 
@@ -36,7 +36,7 @@ public class CtrlConsultaPrecio {
                         if (!cp.getjTxtInicio().getText().isEmpty()) {
                             Double inicio = Double.valueOf(cp.getjTxtInicio().getText());
                             System.out.println("VAlor de inicio:"+inicio);
-                            if (inicio >= producto.getPrecio()) {
+                            if (producto.getPrecio()>=inicio) {
 
                                 addRows(producto);
 
