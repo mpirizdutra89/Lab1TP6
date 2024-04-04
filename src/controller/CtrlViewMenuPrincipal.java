@@ -100,7 +100,14 @@ public class CtrlViewMenuPrincipal {
         escritorio.removeAll();
         escritorio.repaint();
         view.setVisible(true);
-        escritorio.add(view);
+       int w= escritorio.getWidth();
+       int h=escritorio.getHeight();
+        int x = (w - view.getWidth()) / 2;
+        int y = (h - view.getHeight()) / 2;
+                view.setLocation(x, y);
+
+                escritorio.add(view);
+        
         escritorio.moveToFront(view);
 
     }
